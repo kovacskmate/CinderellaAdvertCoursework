@@ -59,8 +59,8 @@ html, body {
   .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
     background: #63283a;
     cursor: pointer;
   }
@@ -129,3 +129,22 @@ html, body {
     flex-basis: 40%;
     background-color: palevioletred;
   }
+
+  #moveCinderella{
+    -webkit-appearance: none;
+    width: 70%;
+    height: 25px;
+    top: 200px;
+    outline: none;
+    position: absolute;    
+    transform: translate(-20%, -20%);
+  }
+
+  #moveCinderella img{
+    height: 500px;
+    width: auto;
+  }
+
+.animated { display: none;}
+.show { display: block;}
+

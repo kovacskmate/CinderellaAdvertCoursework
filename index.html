@@ -9,6 +9,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
+            function animationTimer(){
+                canChange = true;
+            }
+            var moveCinderella = $('#moveCinderella'),
+                nImg = 0,
+                imgNum = $('#moveCinderella img').length,
+                topDiv = (moveCinderella.offset() || { "top": NaN }).top,
+                canChange = true;
             var slider = document.getElementById("slider");
             slider.oninput = function() {
                 console.log(this.value);
@@ -16,10 +24,29 @@
                     document.getElementById("firstFade").style.opacity = this.value / 100 * 2;
                 } else{
                     document.getElementById("firstFade").style.opacity = ((100 - this.value) / 100) * 2;
-                }                
-            }
+                }
+                
+                if(canChange)
+                {
+                    console.log("summit");
+                    canChange = false;
+                    setTimeout(animationTimer, 100);
+                    var y = $(this).scrollTop();        
+                    if(y>topDiv){
+                        nImg++;   
+                    }else{
+                        nImg--;   
+                    }
+                    if(nImg>=imgNum){ nImg = 0; }
+                    if(nImg<0){ nImg = imgNum-1; }
+                    
+                    $(".animated").each(function(){ 
+                        $(this).removeClass("show")            
+                    });
+                    $(".animated").eq(nImg).addClass("show");
+                }
+            };
         });
-
     </script>        
 </head>
 <body>
@@ -34,9 +61,20 @@
         </div>
         <div class="panel">
             <p class="text top-left" id="firstFade" style="opacity: 0;">Fade in Fade out</p>
+            <div id="moveCinderella">
+                <img src="Comp 1_00000.png" class="animated show">
+                <img src="Comp 1_00001.png" class="animated">
+                <img src="Comp 1_00002.png" class="animated">
+                <img src="Comp 1_00003.png" class="animated">
+                <img src="Comp 1_00004.png" class="animated">
+                <img src="Comp 1_00005.png" class="animated">
+                <img src="Comp 1_00006.png" class="animated">
+                <img src="Comp 1_00007.png" class="animated">
+              </div>
             <div class="slider">
                 <input type="range" min="0" max="100" value="0" class="slider" id="slider">
-            </div>  
+                <!-- <input type="range"> -->
+            </div>
         </div>
         <div class="panel">
             <p class="speech">A speech bubble</p>

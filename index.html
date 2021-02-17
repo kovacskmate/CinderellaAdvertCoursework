@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var slider = document.getElementById("slider");
+            slider.oninput = function() {
+                console.log(this.value);
+                if(this.value <= 50){
+                    document.getElementById("firstFade").style.opacity = this.value / 100 * 2;
+                } else{
+                    document.getElementById("firstFade").style.opacity = ((100 - this.value) / 100) * 2;
+                }                
+            }
+        });
+
+    </script>        
+</head>
+<body>
+    <article class="comic">
+        <div class="panel">
+            <p class="text top-left">One day, Cinderella and her stepsisters got invited to a party held by the prince. Unfortunately for Cinderella, her stepsisters took all the nice clothes she could wear for the event.</p>
+            <p class="text bottom-right">Suddenly, she heard a message notification on her phone...</p>            
+        </div>
+        <div class="panel">
+            <p class="text top-left">Morbi ut pellentesque purus.</p>
+            <p class="text bottom-right">Proin eu ligula at nibh dictum fermentum.</p>
+        </div>
+        <div class="panel">
+            <p class="text top-left" id="firstFade" style="opacity: 0;">Fade in Fade out</p>
+            <div class="slider">
+                <input type="range" min="0" max="100" value="0" class="slider" id="slider">
+            </div>  
+        </div>
+        <div class="panel">
+            <p class="speech">A speech bubble</p>
+        </div>
+        <div class="panel">
+            <p class="speech">A speech bubble</p>
+        </div>
+      </article>    
+</body>
+</html>

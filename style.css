@@ -3,6 +3,7 @@ html, body {
     padding:0;
     background-color: #000;
     min-width: 1200px;
+    max-width: 1920px;;
   }
   
   .comic {
@@ -33,6 +34,8 @@ html, body {
     border:solid 2px #000;
     margin:0;
     padding:3px 10px;
+    word-wrap: break-word;
+    text-align: center;
   }
   
   .top-left {
@@ -40,8 +43,6 @@ html, body {
     position:absolute;
     top:10px;
     max-width: 20%;
-    word-wrap: break-word;
-    text-align: center;
     transform:skew(-4deg);
   }
 
@@ -83,6 +84,8 @@ html, body {
     margin:.5em;
     padding:.5em 1em;
     position:relative;
+    word-wrap: break-word;
+    text-align: center;
   }
   
   .speech:before {
@@ -148,3 +151,29 @@ html, body {
 .animated { display: none;}
 .show { display: block;}
 
+#firstPanel{
+  background-image: url(firstRoom.png);
+  background-size: cover;
+}
+
+#cinderellaFirstPanel{
+  position:absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#cinderellaFirstPanel img{    
+    position:absolute;
+    height: 75%;
+    width: auto;
+    left: 50%;
+    bottom: 0px;
+    transform: translate(-50%, 0%);
+}
+
+#cinderellaFirstPanel p{
+  position:absolute;
+  left: 63%;
+  top: 18%;
+  transform: translate(-50%, 0%);
+}

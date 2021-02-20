@@ -151,6 +151,8 @@ html, body {
 .animated { display: none;}
 .show { display: block;}
 
+
+ /* FIRST PANEL */
 #firstPanel{
   background-image: url(firstRoom.png);
   background-size: cover;
@@ -177,3 +179,56 @@ html, body {
   top: 18%;
   transform: translate(-50%, 0%);
 }
+/* FIRST PANEL END */
+
+/* SECOND PANEL */
+#secondPanel{
+  background-image: url(firstRoom.png);
+  background-repeat: no-repeat;
+}
+
+#handSecondPanel img{
+  position:absolute;
+  height: 87%;
+  width: auto;
+  left: 50%;
+  bottom: 0px;
+  transform: translate(-50%, 0%);
+}
+
+#handSecondPanel p{
+  position:absolute;
+  left: 65%;
+  top: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.round-button {
+  position:absolute;
+  left: 44%;
+  top: 65%;
+  transform: translate(-50%, 0%);
+	box-sizing: border-box;
+	display:block;
+	width:80px;
+	height:80px;
+	padding-top: 14px;
+	padding-left: 8px;
+	line-height: 20px;
+	border: 6px solid #fff;
+	border-radius: 50%;
+	color:#f5f5f5;
+	text-align:center;
+	text-decoration:none;
+	background-color: rgba(0,0,0,0.5);
+	font-size:20px;
+	font-weight:bold;
+	transition: all 0.3s ease;
+  cursor: pointer;
+}
+.round-button:hover {
+	background-color: rgba(0,0,0,0.8);
+	box-shadow: 0px 0px 10px rgba(255,255,100,1);
+	text-shadow: 0px 0px 10px rgba(255,255,100,1);
+}
+/* SECOND PANEL END*/

@@ -6,18 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
+
             function animationTimer(){
-                canChange = true;
+                canChange = true;                
             }
+
             var moveCinderella = $('#moveCinderella'),
                 nImg = 0,
                 imgNum = $('#moveCinderella img').length,
                 topDiv = (moveCinderella.offset() || { "top": NaN }).top,
                 canChange = true;
+
             var slider = document.getElementById("slider");
+
+            var textMessage = document.getElementById("textMessage");
+            var playButton = document.getElementById("playButton");
+
+            playButton.onclick = function(){
+                textMessage.style.visibility = "visible";
+            };
+
             slider.oninput = function() {
                 console.log(this.value);
                 if(this.value <= 50){
@@ -56,12 +68,17 @@
             <div id="cinderellaFirstPanel">
                 <img src="cinderellaFirstPanel.png" alt="">
                 <p class="speech">Oh no! I have nothing to wear!</p>
-            </div>            
+            </div>         
             <p class="text bottom-right">Suddenly, she heard a message notification on her phone...</p>            
         </div>
-        <div class="panel">
-            <p class="text top-left">Morbi ut pellentesque purus.</p>
-            <p class="text bottom-right">Proin eu ligula at nibh dictum fermentum.</p>
+        <div class="panel" id="secondPanel">
+            <p class="text top-left">She unlocked her phone and saw a voice message.</p>
+            <div id="handSecondPanel">
+                <img src="phone.png" alt="">           
+                <p id="textMessage" class="speech" style="visibility: hidden;">Come to Alba Denim at...</p>
+                <a id="playButton" class="round-button"><i class="fa fa-play fa-2x"></i></a>
+            </div>
+            <p class="text bottom-right">And then...</p>
         </div>
         <div class="panel">
             <p class="text top-left" id="firstFade" style="opacity: 0;">Fade in Fade out</p>

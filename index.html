@@ -15,13 +15,18 @@
                 canChange = true;                
             }
 
-            var moveCinderella = $('#moveCinderella'),
-                nImg = 0,
-                imgNum = $('#moveCinderella img').length,
-                topDiv = (moveCinderella.offset() || { "top": NaN }).top,
-                canChange = true;
+            var moveCinderella = $('#moveCinderella');
 
-            var slider = document.getElementById("slider");
+            // var cinderWidth = document.getElementById("moveCinderella").offsetWidth;
+            // var currentPos = 0;
+            // var maxPos = cinderWidth - document.getElementById("cinderella").offsetWidth;
+
+            var nImg = 39;
+            var imgNum = $('#moveCinderella img').length;
+            var prevValue = 0;
+            var currValue = 0;
+            var canChange = true;
+            
 
             var textMessage = document.getElementById("textMessage");
             var playButton = document.getElementById("playButton");
@@ -30,8 +35,10 @@
                 textMessage.style.visibility = "visible";
             };
 
+            var slider = document.getElementById("slider");
+
             slider.oninput = function() {
-                console.log(this.value);
+
                 if(this.value <= 50){
                     document.getElementById("firstFade").style.opacity = this.value / 100 * 2;
                 } else{
@@ -40,22 +47,31 @@
                 
                 if(canChange)
                 {
-                    console.log("summit");
                     canChange = false;
-                    setTimeout(animationTimer, 100);
-                    var y = $(this).scrollTop();        
-                    if(y>topDiv){
-                        nImg++;   
+                    currValue = this.value;
+                    setTimeout(animationTimer, 2);
+
+                    if(currValue>prevValue){
+                        nImg++;                          
                     }else{
-                        nImg--;   
+                        nImg--;                        
                     }
-                    if(nImg>=imgNum){ nImg = 0; }
-                    if(nImg<0){ nImg = imgNum-1; }
+
+                    if(nImg >= imgNum){
+                        nImg = 0; 
+                    }
+                    if(nImg < 0){ 
+                        nImg = imgNum-1; 
+                    }
                     
                     $(".animated").each(function(){ 
                         $(this).removeClass("show")            
                     });
                     $(".animated").eq(nImg).addClass("show");
+                    
+                    document.getElementById("moveCinderella").style.left = (this.value / 2) + "%";
+                    
+                    prevValue = this.value;               
                 }
             };
         });
@@ -83,18 +99,49 @@
         <div class="panel">
             <p class="text top-left" id="firstFade" style="opacity: 0;">Fade in Fade out</p>
             <div id="moveCinderella">
-                <img src="Comp 1_00000.png" class="animated show">
-                <img src="Comp 1_00001.png" class="animated">
-                <img src="Comp 1_00002.png" class="animated">
-                <img src="Comp 1_00003.png" class="animated">
-                <img src="Comp 1_00004.png" class="animated">
-                <img src="Comp 1_00005.png" class="animated">
-                <img src="Comp 1_00006.png" class="animated">
-                <img src="Comp 1_00007.png" class="animated">
+                <img id="cinderella" src="Comp 1_00000.png" class="animated show">
+                <img id="cinderella" src="Comp 1_00001.png" class="animated">
+                <img id="cinderella" src="Comp 1_00002.png" class="animated">
+                <img id="cinderella" src="Comp 1_00003.png" class="animated">
+                <img id="cinderella" src="Comp 1_00004.png" class="animated">
+                <img id="cinderella" src="Comp 1_00005.png" class="animated">
+                <img id="cinderella" src="Comp 1_00006.png" class="animated">
+                <img id="cinderella" src="Comp 1_00007.png" class="animated">
+                <img id="cinderella" src="Comp 1_00008.png" class="animated">
+                <img id="cinderella" src="Comp 1_00009.png" class="animated">
+                <img id="cinderella" src="Comp 1_00010.png" class="animated">
+                <img id="cinderella" src="Comp 1_00011.png" class="animated">
+                <img id="cinderella" src="Comp 1_00012.png" class="animated">
+                <img id="cinderella" src="Comp 1_00013.png" class="animated">
+                <img id="cinderella" src="Comp 1_00014.png" class="animated">
+                <img id="cinderella" src="Comp 1_00015.png" class="animated">
+                <img id="cinderella" src="Comp 1_00016.png" class="animated">
+                <img id="cinderella" src="Comp 1_00017.png" class="animated">
+                <img id="cinderella" src="Comp 1_00018.png" class="animated">
+                <img id="cinderella" src="Comp 1_00019.png" class="animated">
+                <img id="cinderella" src="Comp 1_00020.png" class="animated">
+                <img id="cinderella" src="Comp 1_00021.png" class="animated">
+                <img id="cinderella" src="Comp 1_00022.png" class="animated">
+                <img id="cinderella" src="Comp 1_00023.png" class="animated">
+                <img id="cinderella" src="Comp 1_00024.png" class="animated">
+                <img id="cinderella" src="Comp 1_00025.png" class="animated">
+                <img id="cinderella" src="Comp 1_00026.png" class="animated">
+                <img id="cinderella" src="Comp 1_00027.png" class="animated">
+                <img id="cinderella" src="Comp 1_00028.png" class="animated">
+                <img id="cinderella" src="Comp 1_00029.png" class="animated">
+                <img id="cinderella" src="Comp 1_00030.png" class="animated">
+                <img id="cinderella" src="Comp 1_00031.png" class="animated">
+                <img id="cinderella" src="Comp 1_00032.png" class="animated">
+                <img id="cinderella" src="Comp 1_00033.png" class="animated">
+                <img id="cinderella" src="Comp 1_00034.png" class="animated">
+                <img id="cinderella" src="Comp 1_00035.png" class="animated">
+                <img id="cinderella" src="Comp 1_00036.png" class="animated">
+                <img id="cinderella" src="Comp 1_00037.png" class="animated">
+                <img id="cinderella" src="Comp 1_00038.png" class="animated">                
               </div>
             <div class="slider">
-                <input type="range" min="0" max="100" value="0" class="slider" id="slider">
-                <!-- <input type="range"> -->
+                <input type="range" min="0" max="200" value="0" class="slider" id="slider">
+
             </div>
         </div>
         <div class="panel">

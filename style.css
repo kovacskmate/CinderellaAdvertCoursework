@@ -135,17 +135,17 @@ html, body {
 
   #moveCinderella{
     -webkit-appearance: none;
-    width: 70%;
-    height: 25px;
-    top: 200px;
+    width: 100%;
+    height: auto;
+    top: 280px;
     outline: none;
-    position: absolute;    
-    transform: translate(-20%, -20%);
+    position: absolute;
   }
 
   #moveCinderella img{
-    height: 500px;
+    height: 340px;
     width: auto;
+    /* transform: translate(-100%, 0%); */
   }
 
 .animated { display: none;}

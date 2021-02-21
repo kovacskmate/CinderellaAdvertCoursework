@@ -11,25 +11,32 @@
     <script>
         $(document).ready(function() {
 
-            function animationTimer(){
-                canChange = true;                
-            }
-
-            var moveCinderella = $('#moveCinderella');
-
-            // var cinderWidth = document.getElementById("moveCinderella").offsetWidth;
-            // var currentPos = 0;
-            // var maxPos = cinderWidth - document.getElementById("cinderella").offsetWidth;
-
-            var nImg = 39;
+            var nImg = 0;
             var imgNum = $('#moveCinderella img').length;
+            console.log(imgNum);
             var prevValue = 0;
             var currValue = 0;
+            var canAnimate = true;
             var canChange = true;
-            
 
+            var moveCinderella = $('#moveCinderella');
+            
             var textMessage = document.getElementById("textMessage");
             var playButton = document.getElementById("playButton");
+
+            function animationTimer(){
+                canAnimate = true;                
+            }
+
+            function changeClothes(name){
+                for(var i = 0; i < imgNum; i++){
+                    document.getElementById("cinderella" + i).src = name + " (" + (i + 1) + ").png";
+                }                
+            }
+        
+            // var cinderWidth = document.getElementById("moveCinderella").offsetWidth;
+            // var currentPos = 0;
+            // var maxPos = cinderWidth - document.getElementById("cinderella").offsetWidth;           
 
             playButton.onclick = function(){
                 textMessage.style.visibility = "visible";
@@ -44,35 +51,40 @@
                 } else{
                     document.getElementById("firstFade").style.opacity = ((100 - this.value) / 100) * 2;
                 }
-                
-                if(canChange)
-                {
+
+                if(this.value > 90 && canChange){
+                    changeClothes("denim");
                     canChange = false;
+                } else if(this.value <= 90 && !canChange){
+                    changeClothes("oldClothes");
+                    canChange = true;
+                }
+
+                if(canAnimate)
+                {
+                    canAnimate = false;
                     currValue = this.value;
                     setTimeout(animationTimer, 2);
-
                     if(currValue>prevValue){
                         nImg++;                          
                     }else{
                         nImg--;                        
                     }
-
                     if(nImg >= imgNum){
                         nImg = 0; 
                     }
                     if(nImg < 0){ 
                         nImg = imgNum-1; 
-                    }
-                    
+                    }                    
                     $(".animated").each(function(){ 
                         $(this).removeClass("show")            
                     });
-                    $(".animated").eq(nImg).addClass("show");
-                    
-                    document.getElementById("moveCinderella").style.left = (this.value / 2) + "%";
-                    
+                    $(".animated").eq(nImg).addClass("show");                    
+                    document.getElementById("moveCinderella").style.left = (this.value / 2) + "%";                    
                     prevValue = this.value;               
                 }
+
+
             };
         });
     </script>        
@@ -99,49 +111,53 @@
         <div class="panel">
             <p class="text top-left" id="firstFade" style="opacity: 0;">Fade in Fade out</p>
             <div id="moveCinderella">
-                <img id="cinderella" src="Comp 1_00000.png" class="animated show">
-                <img id="cinderella" src="Comp 1_00001.png" class="animated">
-                <img id="cinderella" src="Comp 1_00002.png" class="animated">
-                <img id="cinderella" src="Comp 1_00003.png" class="animated">
-                <img id="cinderella" src="Comp 1_00004.png" class="animated">
-                <img id="cinderella" src="Comp 1_00005.png" class="animated">
-                <img id="cinderella" src="Comp 1_00006.png" class="animated">
-                <img id="cinderella" src="Comp 1_00007.png" class="animated">
-                <img id="cinderella" src="Comp 1_00008.png" class="animated">
-                <img id="cinderella" src="Comp 1_00009.png" class="animated">
-                <img id="cinderella" src="Comp 1_00010.png" class="animated">
-                <img id="cinderella" src="Comp 1_00011.png" class="animated">
-                <img id="cinderella" src="Comp 1_00012.png" class="animated">
-                <img id="cinderella" src="Comp 1_00013.png" class="animated">
-                <img id="cinderella" src="Comp 1_00014.png" class="animated">
-                <img id="cinderella" src="Comp 1_00015.png" class="animated">
-                <img id="cinderella" src="Comp 1_00016.png" class="animated">
-                <img id="cinderella" src="Comp 1_00017.png" class="animated">
-                <img id="cinderella" src="Comp 1_00018.png" class="animated">
-                <img id="cinderella" src="Comp 1_00019.png" class="animated">
-                <img id="cinderella" src="Comp 1_00020.png" class="animated">
-                <img id="cinderella" src="Comp 1_00021.png" class="animated">
-                <img id="cinderella" src="Comp 1_00022.png" class="animated">
-                <img id="cinderella" src="Comp 1_00023.png" class="animated">
-                <img id="cinderella" src="Comp 1_00024.png" class="animated">
-                <img id="cinderella" src="Comp 1_00025.png" class="animated">
-                <img id="cinderella" src="Comp 1_00026.png" class="animated">
-                <img id="cinderella" src="Comp 1_00027.png" class="animated">
-                <img id="cinderella" src="Comp 1_00028.png" class="animated">
-                <img id="cinderella" src="Comp 1_00029.png" class="animated">
-                <img id="cinderella" src="Comp 1_00030.png" class="animated">
-                <img id="cinderella" src="Comp 1_00031.png" class="animated">
-                <img id="cinderella" src="Comp 1_00032.png" class="animated">
-                <img id="cinderella" src="Comp 1_00033.png" class="animated">
-                <img id="cinderella" src="Comp 1_00034.png" class="animated">
-                <img id="cinderella" src="Comp 1_00035.png" class="animated">
-                <img id="cinderella" src="Comp 1_00036.png" class="animated">
-                <img id="cinderella" src="Comp 1_00037.png" class="animated">
-                <img id="cinderella" src="Comp 1_00038.png" class="animated">                
-              </div>
+                <img id="cinderella0" src="oldClothes (1).png" class="animated show">
+                <img id="cinderella1" src="oldClothes (2).png" class="animated">
+                <img id="cinderella2" src="oldClothes (3).png" class="animated">
+                <img id="cinderella3" src="oldClothes (4).png" class="animated">
+                <img id="cinderella4" src="oldClothes (5).png" class="animated">
+                <img id="cinderella5" src="oldClothes (6).png" class="animated">
+                <img id="cinderella6" src="oldClothes (7).png" class="animated">
+                <img id="cinderella7" src="oldClothes (8).png" class="animated">
+                <img id="cinderella8" src="oldClothes (9).png" class="animated">
+                <img id="cinderella9" src="oldClothes (10).png" class="animated">
+                <img id="cinderella10" src="oldClothes (11).png" class="animated">
+                <img id="cinderella11" src="oldClothes (12).png" class="animated">
+                <img id="cinderella12" src="oldClothes (13).png" class="animated">
+                <img id="cinderella13" src="oldClothes (14).png" class="animated">
+                <img id="cinderella14" src="oldClothes (15).png" class="animated">
+                <img id="cinderella15" src="oldClothes (16).png" class="animated">
+                <img id="cinderella16" src="oldClothes (17).png" class="animated">
+                <img id="cinderella17" src="oldClothes (18).png" class="animated">
+                <img id="cinderella18" src="oldClothes (19).png" class="animated">
+                <img id="cinderella19" src="oldClothes (20).png" class="animated">
+                <img id="cinderella20" src="oldClothes (21).png" class="animated">
+                <img id="cinderella21" src="oldClothes (22).png" class="animated">
+                <img id="cinderella22" src="oldClothes (23).png" class="animated">
+                <img id="cinderella23" src="oldClothes (24).png" class="animated">
+                <img id="cinderella24" src="oldClothes (25).png" class="animated">
+                <img id="cinderella25" src="oldClothes (26).png" class="animated">
+                <img id="cinderella26" src="oldClothes (27).png" class="animated">
+                <img id="cinderella27" src="oldClothes (28).png" class="animated">
+                <img id="cinderella28" src="oldClothes (29).png" class="animated">
+                <img id="cinderella29" src="oldClothes (30).png" class="animated">
+                <img id="cinderella30" src="oldClothes (31).png" class="animated">
+                <img id="cinderella31" src="oldClothes (32).png" class="animated">
+                <img id="cinderella32" src="oldClothes (33).png" class="animated">
+                <img id="cinderella33" src="oldClothes (34).png" class="animated">
+                <img id="cinderella34" src="oldClothes (35).png" class="animated">
+                <img id="cinderella35" src="oldClothes (36).png" class="animated">
+                <img id="cinderella36" src="oldClothes (37).png" class="animated">
+                <img id="cinderella37" src="oldClothes (38).png" class="animated">
+                <img id="cinderella38" src="oldClothes (39).png" class="animated">                
+            </div>
+
+            <div id="changingRoom">
+                <p class="text">changing room</p>
+            </div>
+
             <div class="slider">
                 <input type="range" min="0" max="200" value="0" class="slider" id="slider">
-
             </div>
         </div>
         <div class="panel">

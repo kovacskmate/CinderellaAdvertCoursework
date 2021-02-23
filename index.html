@@ -12,9 +12,15 @@
     <script>
         $(document).ready(function() {
 
+
+            var phoneScreen2 = document.getElementById("phoneScreen2");
+
+            $('#call').click(function() {
+                $('#phoneScreen2').fadeToggle(300)
+            });
+
             var nImg = 0;
             var imgNum = $('#moveCinderella img').length;
-            console.log(imgNum);
             var prevValue = 0;
             var currValue = 0;
             var canAnimate = true;
@@ -34,14 +40,7 @@
                     document.getElementById("cinderella" + i).src = name + " (" + (i + 1) + ").png";
                 }                
             }
-        
-            // var cinderWidth = document.getElementById("moveCinderella").offsetWidth;
-            // var currentPos = 0;
-            // var maxPos = cinderWidth - document.getElementById("cinderella").offsetWidth;           
-
-            playButton.onclick = function(){
-                textMessage.style.visibility = "visible";
-            };
+         
 
             var slider = document.getElementById("slider");
 
@@ -96,13 +95,13 @@
                 <img src="cinderellaFirstPanel.png" alt="">
                 <p class="speech">Oh, no! I have nothing to wear! What should I do?</p>
             </div>         
-            <p class="text bottom-right">She remember her rich godmother who would do anything for her.</p>            
+            <p class="text bottom-right">She remembered her rich godmother who would do anything for her.</p>            
         </div>
         <div class="panel" id="secondPanel">
             <p class="text top-left">She unlocked her phone and called her godmother.</p>
             <div id="handSecondPanel">
                 <img src="phone.png" alt="">
-                <div id="phoneScreen">                    
+                <div id="phoneScreen1" class="phoneScreen">                    
                     <table id="contacts">
                         <tr>
                             <th>Contacts</th>                            
@@ -110,29 +109,79 @@
                         <tr>
                             <td>
                                 Bruno
-                                <div style="float:right">
+                                <div>
                                     <i class="fas fa-envelope fa-lg"></i>
                                     <i class="fas fa-phone fa-lg"></i>
                                 </div>
                             </td>
                         </tr>
                         <tr>
-                            <td>Father</td>
+                            <td>
+                                Gus
+                                <div>
+                                    <i class="fas fa-envelope fa-lg"></i>
+                                    <i class="fas fa-phone fa-lg"></i>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
-                            <td>Godmother</td>
+                            <td>
+                                Godmother
+                                <div>
+                                    <i class="fas fa-envelope fa-lg"></i>
+                                    <i id="call" class="fas fa-phone fa-lg"></i>
+                                </div>
+                            </td>
                         </tr>
                         <tr>
-                            <td>Gus</td>
-                        </tr>
-                        <tr>
-                            <td>Mother</td>
-                        </tr>
-                        <tr>
-                            <td>Sis</td>
+                            <td>
+                                Father
+                                <div>
+                                    <i class="fas fa-envelope fa-lg"></i>
+                                    <i class="fas fa-phone fa-lg"></i>
+                                </div>
+                            </td>
                         </tr>
                     </table>
-                </div>          
+                </div>
+                <div id="phoneScreen2" class="phoneScreen">
+                    <div id="callInfoTop" style="background-color: aqua;">
+                        <h6 id="callDur">0:32</h6>
+                        <h1 id="godMom">Godmother</h1>
+                        <h5 id="mobileNum">Mobile +12 345 6789</h5>
+                        <h6 id="inCall">IN CALL</h6>
+                    </div>
+                    <div id="callInfoBottom" style="background-color: blueviolet;">                        
+                        <div>
+                            <i class="fas fa-phone-volume fa-2x"></i>
+                            <h5>Extra volume</h5>
+                        </div>
+                        <div>
+                            <i class="fab fa-bluetooth-b fa-2x"></i>
+                            <h5>Bluetooth</h5>
+                        </div>
+                        <div>
+                            <i class="fas fa-plus fa-2x"></i>
+                            <h5>Add call</h5>
+                        </div>
+                        <div>
+                            <i class="fas fa-volume-up fa-2x"></i>
+                            <h5>Speaker</h5>
+                        </div>                        
+                        <div>
+                            <i class="fas fa-microphone-slash fa-2x"></i>    
+                            <h5>Mute</h5>
+                        </div>
+                        <div>
+                            <i class="fas fa-keyboard fa-2x"></i>
+                            <h5>Keypad</h5>
+                        </div>                      
+                        <div>
+                            <i class="fas fa-phone-slash fa-3x"></i>
+                            <h5>Hang up</h5>
+                        </div>
+                    </div>
+                </div>  
                 <p id="textMessage" class="speech" style="visibility: hidden;">Come to Alba Denim at...</p>
                 <!-- <a id="playButton" class="round-button"><i class="fa fa-play fa-2x"></i></a> -->
             </div>

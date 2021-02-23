@@ -137,6 +137,7 @@ html, body {
 
 #cinderellaFirstPanel p{
   position:absolute;
+  max-width: 200px;
   left: 63%;
   top: 18%;
   transform: translate(-50%, 0%);
@@ -167,36 +168,7 @@ html, body {
   transform: translate(-50%, 0%);
 }
 
-.round-button {
-  position:absolute;
-  left: 270px;
-  top: 65%;
-  transform: translate(-50%, 0%);
-	box-sizing: border-box;
-	display:block;
-	width:80px;
-	height:80px;
-	padding-top: 14px;
-	padding-left: 8px;
-	line-height: 20px;
-	border: 6px solid #fff;
-	border-radius: 50%;
-	color:#f5f5f5;
-	text-align:center;
-	text-decoration:none;
-	background-color: rgba(0,0,0,0.5);
-	font-size:20px;
-	font-weight:bold;
-	transition: all 0.3s ease;
-  cursor: pointer;
-}
-.round-button:hover {
-	background-color: rgba(0,0,0,0.8);
-	box-shadow: 0px 0px 10px rgb(255, 255, 255);
-	text-shadow: 0px 0px 10px rgb(65, 65, 64);
-}
-
-#phoneScreen{
+.phoneScreen{
   position:absolute;
   left: 270px;
   height: 406px;
@@ -204,6 +176,10 @@ html, body {
   top: 169px;
   transform: translate(-50%, 0%);
   background-color: #e2e2e2;
+}
+
+#phoneScreen2{
+  display: none;
 }
 
 #contacts {
@@ -237,12 +213,75 @@ html, body {
   display: inline-block;
 }
 
-.fa-phone:hover{
-	box-shadow: 0px 0px 10px rgb(255, 255, 255);
+#contacts td div{
+  float: right;
+}
+
+#call{
 	text-shadow: 0px 0px 10px rgba(247, 252, 0, 1),
                0px 0px 12px rgba(247, 252, 0, 1);
-  cursor: pointer;
 }
+
+#call:hover{
+  cursor: pointer;
+  text-shadow: 0px 0px 10px rgb(0, 252, 252, 1),
+                0px 0px 12px rgba(0, 252, 252, 1);
+}
+
+#callInfoTop{
+  height: 30%;
+}
+
+#callInfoBottom{
+  height: 70%;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#callDur{
+  margin:0;
+  padding-left: 5px;
+  padding-top: 5px;
+  text-align: left;
+}
+
+#godMom{
+  text-align: center;
+  margin: 0;
+  padding-top: 5;
+}
+
+#mobileNum{
+  text-align: center;
+  margin: 0;
+  padding-top: 3px;
+}
+
+#inCall{
+  text-align: center;
+  margin: 0;
+  padding-top: 20px;
+  bottom: 20px;
+}
+
+.fa-phone-slash{
+  color: red;
+}
+
+#callInfoBottom div h5{
+  margin: 0;
+  padding: 0;
+}
+#callInfoBottom div {
+  margin: 0;
+  padding-top: 25px;
+  flex: 1 1 33%;
+  min-height: 50px;
+  max-height: 50px;
+  text-align: center;
+  font-size: 14px;
+}
+
 
 /* SECOND PANEL END*/
 

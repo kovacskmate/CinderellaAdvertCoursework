@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/59202bfd86.js" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function() {
 
@@ -83,8 +84,6 @@
                     document.getElementById("moveCinderella").style.left = (this.value / 2) + "%";                    
                     prevValue = this.value;               
                 }
-
-
             };
         });
     </script>        
@@ -92,21 +91,52 @@
 <body>
     <article class="comic">
         <div class="panel" id="firstPanel">
-            <p class="text top-left">One day, Cinderella and her stepsisters got invited to a party held by the prince. Unfortunately for Cinderella, her stepsisters took all the nice clothes she could wear for the event.</p>
+            <p class="text top-left">The girl group Prince Charming which Cinderella has been dreaming ofjoining for ages is in town and holding an audition tomorrow, however there is a problem.</p>
             <div id="cinderellaFirstPanel">
                 <img src="cinderellaFirstPanel.png" alt="">
-                <p class="speech">Oh no! I have nothing to wear!</p>
+                <p class="speech">Oh, no! I have nothing to wear! What should I do?</p>
             </div>         
-            <p class="text bottom-right">Suddenly, she heard a message notification on her phone...</p>            
+            <p class="text bottom-right">She remember her rich godmother who would do anything for her.</p>            
         </div>
         <div class="panel" id="secondPanel">
-            <p class="text top-left">She unlocked her phone and saw a voice message.</p>
+            <p class="text top-left">She unlocked her phone and called her godmother.</p>
             <div id="handSecondPanel">
-                <img src="phone.png" alt="">           
+                <img src="phone.png" alt="">
+                <div id="phoneScreen">                    
+                    <table id="contacts">
+                        <tr>
+                            <th>Contacts</th>                            
+                        </tr>
+                        <tr>
+                            <td>
+                                Bruno
+                                <div style="float:right">
+                                    <i class="fas fa-envelope fa-lg"></i>
+                                    <i class="fas fa-phone fa-lg"></i>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Father</td>
+                        </tr>
+                        <tr>
+                            <td>Godmother</td>
+                        </tr>
+                        <tr>
+                            <td>Gus</td>
+                        </tr>
+                        <tr>
+                            <td>Mother</td>
+                        </tr>
+                        <tr>
+                            <td>Sis</td>
+                        </tr>
+                    </table>
+                </div>          
                 <p id="textMessage" class="speech" style="visibility: hidden;">Come to Alba Denim at...</p>
-                <a id="playButton" class="round-button"><i class="fa fa-play fa-2x"></i></a>
+                <!-- <a id="playButton" class="round-button"><i class="fa fa-play fa-2x"></i></a> -->
             </div>
-            <p class="text bottom-right">And then...</p>
+            <p class="text bottom-right">So Cinderella headed to Alba Denim.</p>
         </div>
         <div class="panel">
             <p class="text top-left" id="firstFade" style="opacity: 0;">Fade in Fade out</p>
@@ -161,10 +191,10 @@
             </div>
         </div>
         <div class="panel">
-            <p class="speech">A speech bubble</p>
+
         </div>
         <div class="panel">
-            <p class="speech">A speech bubble</p>
+            
         </div>
       </article>    
 </body>

@@ -96,21 +96,21 @@ html, body {
   
   .panel:nth-child(1) {
     flex-basis: 60%;
-    background-color: palevioletred;
+    background-color: rgb(129, 183, 255);
   }
   .panel:nth-child(2) {
     flex-basis: 30%;
   }
   .panel:nth-child(3) {
     flex-basis: 100%;
-    background-color: palevioletred;
+    background-color: rgb(129, 183, 255);
   }
   .panel:nth-child(4) {
     flex-basis: 40%;
   }
   .panel:nth-child(5) {
     flex-basis: 40%;
-    background-color: palevioletred;
+    background-color: rgb(129, 183, 255);
   }
 
 
@@ -127,12 +127,12 @@ html, body {
 }
 
 #cinderellaFirstPanel img{    
-    position:absolute;
-    height: 75%;
-    width: auto;
-    left: 50%;
-    bottom: 0px;
-    transform: translate(-50%, 0%);
+  position:absolute;
+  height: 75%;
+  width: auto;
+  left: 50%;
+  bottom: 0px;
+  transform: translate(-50%, 0%);
 }
 
 #cinderellaFirstPanel p{
@@ -147,6 +147,8 @@ html, body {
 #secondPanel{
   background-image: url(firstRoom.png);
   background-repeat: no-repeat;
+  min-width: 600px;
+  max-width: 600px;
 }
 
 #handSecondPanel img{
@@ -167,7 +169,7 @@ html, body {
 
 .round-button {
   position:absolute;
-  left: 44%;
+  left: 270px;
   top: 65%;
   transform: translate(-50%, 0%);
 	box-sizing: border-box;
@@ -190,9 +192,58 @@ html, body {
 }
 .round-button:hover {
 	background-color: rgba(0,0,0,0.8);
-	box-shadow: 0px 0px 10px rgba(255,255,100,1);
-	text-shadow: 0px 0px 10px rgba(255,255,100,1);
+	box-shadow: 0px 0px 10px rgb(255, 255, 255);
+	text-shadow: 0px 0px 10px rgb(65, 65, 64);
 }
+
+#phoneScreen{
+  position:absolute;
+  left: 270px;
+  height: 406px;
+  width: 218px;
+  top: 169px;
+  transform: translate(-50%, 0%);
+  background-color: #e2e2e2;
+}
+
+#contacts {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#contacts td, #contacts th {
+  padding: 8px;
+}
+
+#contacts tr:nth-child(even){background-color: #fdfdfd;}
+
+#contacts th {
+  border: 1px solid rgb(0, 0, 0);
+  color: white;
+  width: 100%;
+  text-align: center;
+  background-color: rgb(31, 31, 31);
+  font-size: 18px;
+}
+
+#contacts td{
+  border: 1px solid rgb(0, 0, 0);
+}
+
+#contacts td i{
+  padding-left: 5px;
+  padding-right: 5px;
+  top: 50%;
+  display: inline-block;
+}
+
+.fa-phone:hover{
+	box-shadow: 0px 0px 10px rgb(255, 255, 255);
+	text-shadow: 0px 0px 10px rgba(247, 252, 0, 1),
+               0px 0px 12px rgba(247, 252, 0, 1);
+  cursor: pointer;
+}
+
 /* SECOND PANEL END*/
 
 /* THIRD PANEL */

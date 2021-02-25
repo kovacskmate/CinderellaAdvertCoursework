@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cinderella and Alba Denim</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -12,11 +12,11 @@
     <script>
         $(document).ready(function() {
 
-
             var phoneScreen2 = document.getElementById("phoneScreen2");
 
             $('#call').click(function() {
-                $('#phoneScreen2').fadeToggle(300)
+                $('#phoneScreen2').fadeToggle(300);
+                setTimeout(() => { $('#textMessage').fadeToggle(400); }, 800);                
             });
 
             var nImg = 0;
@@ -39,18 +39,80 @@
                 for(var i = 0; i < imgNum; i++){
                     document.getElementById("cinderella" + i).src = name + " (" + (i + 1) + ").png";
                 }                
-            }
-         
+            }         
 
             var slider = document.getElementById("slider");
 
             slider.oninput = function() {
+                console.log(this.value);
 
-                if(this.value <= 50){
-                    document.getElementById("firstFade").style.opacity = this.value / 100 * 2;
-                } else{
-                    document.getElementById("firstFade").style.opacity = ((100 - this.value) / 100) * 2;
+
+
+                if(this.value <= 50 && this.value >= 25){
+                    // document.getElementById("firstFade").style.opacity = this.value / 100 * 2;
+                    document.getElementById("firstFade").style.opacity = 1 - (((this.value - 25) / 100 ) * 4);
+                    document.getElementById("secondFade").style.opacity = (((this.value - 25) / 100 ) * 4);    
+                    // document.getElementById("thirdFade").style.opacity = 0;
+                    // document.getElementById("fourthFade").style.opacity = 0;
+                    // document.getElementById("fifthFade").style.opacity = 0;            
+                } else if(this.value <= 100 && this.value >= 75){
+                    document.getElementById("secondFade").style.opacity = 1 - (((this.value - 75) / 100 ) * 4);0
+                    document.getElementById("thirdFade").style.opacity = (((this.value - 75) / 100 ) * 4);
+                    // document.getElementById("firstFade").style.opacity = 0;
+                    // document.getElementById("fourthFade").style.opacity = 0;
+                    // document.getElementById("fifthFade").style.opacity = 0;
+                } else if(this.value <= 150 && this.value >= 125){
+                    document.getElementById("thirdFade").style.opacity = 1 - (((this.value - 125) / 100 ) * 4);0
+                    document.getElementById("fourthFade").style.opacity = (((this.value - 125) / 100 ) * 4);
+                    // document.getElementById("firstFade").style.opacity = 0;
+                    // document.getElementById("secondFade").style.opacity = 0;
+                    // document.getElementById("secondFade").style.opacity = 0;
+                } else if(this.value <= 200 && this.value >= 175){
+                    document.getElementById("fourthFade").style.opacity = 1 - (((this.value - 175) / 100 ) * 4);0
+                    document.getElementById("fifthFade").style.opacity = (((this.value - 175) / 100 ) * 4);
+                    // document.getElementById("firstFade").style.opacity = 0;
+                    // document.getElementById("secondFade").style.opacity = 0;
+                    // document.getElementById("thirdFade").style.opacity = 0;
                 }
+
+                if(this.value >= 0 && this.value <= 25){
+                    document.getElementById("firstFade").style.opacity = 1;
+                    document.getElementById("secondFade").style.opacity = 0;
+                    document.getElementById("thirdFade").style.opacity = 0;
+                    document.getElementById("fourthFade").style.opacity = 0;
+                    document.getElementById("fifthFade").style.opacity = 0; 
+                } else if(this.value >= 50 && this.value <= 75){
+                    document.getElementById("firstFade").style.opacity = 0;
+                    document.getElementById("secondFade").style.opacity = 1;
+                    document.getElementById("thirdFade").style.opacity = 0;
+                    document.getElementById("fourthFade").style.opacity = 0;
+                    document.getElementById("fifthFade").style.opacity = 0; 
+                }
+                else if(this.value >= 100 && this.value <= 125){
+                    document.getElementById("firstFade").style.opacity = 0;
+                    document.getElementById("secondFade").style.opacity = 0;
+                    document.getElementById("thirdFade").style.opacity = 1;
+                    document.getElementById("fourthFade").style.opacity = 0;
+                    document.getElementById("fifthFade").style.opacity = 0; 
+                }
+                else if(this.value >= 150 && this.value <= 175){
+                    document.getElementById("firstFade").style.opacity = 0;
+                    document.getElementById("secondFade").style.opacity = 0;
+                    document.getElementById("thirdFade").style.opacity = 0;
+                    document.getElementById("fourthFade").style.opacity = 1;
+                    document.getElementById("fifthFade").style.opacity = 0; 
+                } else if(this.value == 200){
+                    document.getElementById("firstFade").style.opacity = 0;
+                    document.getElementById("secondFade").style.opacity = 0;
+                    document.getElementById("thirdFade").style.opacity = 0;
+                    document.getElementById("fourthFade").style.opacity = 0;
+                    document.getElementById("fifthFade").style.opacity = 1; 
+                }
+
+                // 0-25 first
+                // 50-75 second
+                // 100 - 125 third
+                // 150 - 175 fourth
 
                 if(this.value > 90 && canChange){
                     changeClothes("denim");
@@ -182,13 +244,21 @@
                         </div>
                     </div>
                 </div>  
-                <p id="textMessage" class="speech" style="visibility: hidden;">Come to Alba Denim at...</p>
+                <p id="textMessage" class="speech">Hello Cinderella! Sure thing, we'll get you some clothes! Go to Alba Denim and buy what you need. And don't worry about the money!</p>
                 <!-- <a id="playButton" class="round-button"><i class="fa fa-play fa-2x"></i></a> -->
             </div>
-            <p class="text bottom-right">So Cinderella headed to Alba Denim.</p>
+            <p class="text bottom-right">Overcome with joy, Cinderella headed to Alba Denim.</p>
         </div>
-        <div class="panel">
-            <p class="text top-left" id="firstFade" style="opacity: 0;">Fade in Fade out</p>
+        <div class="panel" id="thirdPanel">
+            <div id="ground">
+                <img src="ground.png" alt="">
+            </div>
+
+
+            <div id="behindCinderella">
+                <img src="alba.png" alt="">
+            </div>
+
             <div id="moveCinderella">
                 <img id="cinderella0" src="oldClothes (1).png" class="animated show">
                 <img id="cinderella1" src="oldClothes (2).png" class="animated">
@@ -231,16 +301,32 @@
                 <img id="cinderella38" src="oldClothes (39).png" class="animated">                
             </div>
 
-            <div id="changingRoom">
-                <p class="text">changing room</p>
+            <div id="frontOfCinderella">
+                <img src="frontOfCinderella.png" alt="">                
+            </div>
+
+            <div id="fittingRoom">
+                <img src="fitting room.png" alt="">
             </div>
 
             <div class="slider">
-                <input type="range" min="0" max="200" value="0" class="slider" id="slider">
+                <input type="range" min="0" max="200" value="0" class="slider" id="slider" step="1">
             </div>
-        </div>
-        <div class="panel">
 
+            <p class="text top-left" id="firstFade" style="opacity: 1;">Alba Denim is a luxury denim brand based in Edinburgh, with its manufacturing facilities dating back to 1913.</p>
+
+            <p class="text top-left" id="secondFade" style="opacity: 0;">All our denim is weaved on original 1950s looms, ring spun and at a relatively heavy weight of 12 ounces.</p>
+
+            <p class="text top-left" id="thirdFade" style="opacity: 0;">Our high quality jeans are not pre-shrunk and come in one style although although they can be customised to the wearer’s specification.</p>
+
+            <p class="text top-left" id="fourthFade" style="opacity: 0;">If the customer wants their jeans stone washed then the trousers will be put into the machine with pumice stones and washed and dried for collection or delivery.</p>
+
+            <p class="text top-left" id="fifthFade" style="opacity: 0;">Jeans are our signature although we will produce a range of complimentary high fashion workwear garments.</p>
+
+            <p class="text bottom-right">With her new outfit, Cinderella was ready to go to the audition.</p>
+        </div>
+        <div class="panel" id="fourthPanel">
+            <p class="text top-left">On the day of the audition...</p>
         </div>
         <div class="panel">
             

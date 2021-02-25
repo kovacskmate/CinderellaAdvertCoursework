@@ -161,11 +161,14 @@ html, body {
   transform: translate(-50%, 0%);
 }
 
-#handSecondPanel p{
+#textMessage{
   position:absolute;
-  left: 65%;
-  top: 50%;
+  left: 72%;
+  top: 3%;
   transform: translate(-50%, 0%);
+  min-width: 200px;
+  max-width: 200px;
+  display: none;
 }
 
 .phoneScreen{
@@ -272,6 +275,7 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
 #callInfoBottom div {
   margin: 0;
   padding-top: 25px;
@@ -281,7 +285,6 @@ html, body {
   text-align: center;
   font-size: 14px;
 }
-
 
 /* SECOND PANEL END*/
 
@@ -299,7 +302,7 @@ html, body {
   height: 37%;
   width: auto;
   position: absolute;
-  bottom: 10%;
+  bottom: 57px;
   /* transform: translate(-100%, 0%); */
 }
 
@@ -311,10 +314,10 @@ html, body {
   width: 70%;
   height: 25px;
   outline: none;
-  bottom: 0.1%;
+  bottom: 7px;
   position: absolute;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
 }
 
 .slider::-webkit-slider-thumb {
@@ -336,4 +339,75 @@ html, body {
   top: 50%;
 }
 
+#ground img{
+  position:absolute;
+  height: 63px;
+  width: 100%;
+  left: 50%;
+  bottom: 0px;
+  transform: translate(-50%, 0%);
+}
+
+#behindCinderella img{
+  position:absolute;
+  height: 550px;
+  width: auto;
+  left: 50%;
+  bottom: 5px;
+  transform: translate(-50%, 0%);
+}
+
+#frontOfCinderella img{
+  position:absolute;
+  height: 550px;
+  width: auto;
+  left: 50%;
+  bottom: 5px;
+  transform: translate(-50%, 0%);
+}
+
+#fittingRoom img{
+  position:absolute;
+  height: 360px;
+  width: auto;
+  left: 50%;
+  bottom: 63px;
+  transform: translate(-50%, 0%);
+}
+
+#thirdPanel{
+  background-image: url(citybgtest.png);
+  background-size: cover;
+}
+
+#firstFade{
+  
+}
+
+#secondFade{
+  left: 20%;
+  top: 17%;
+}
+
+#thirdFade{
+  left: 40%;
+}
+
+#fourthFade{
+  left: 60%;
+  top: 19%;
+}
+
+#fifthFade{
+  left: 80%;
+}
+
 /* THIRD PANEL END */
+
+/* FOURTH PANEL */
+
+#fourthPanel{
+  background-image: url(auditionRoom.png);
+}
+
+/* FOURTH PANEL END*/

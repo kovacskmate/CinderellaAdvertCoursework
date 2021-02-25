@@ -44,35 +44,19 @@
             var slider = document.getElementById("slider");
 
             slider.oninput = function() {
-                console.log(this.value);
-
-
 
                 if(this.value <= 50 && this.value >= 25){
-                    // document.getElementById("firstFade").style.opacity = this.value / 100 * 2;
                     document.getElementById("firstFade").style.opacity = 1 - (((this.value - 25) / 100 ) * 4);
-                    document.getElementById("secondFade").style.opacity = (((this.value - 25) / 100 ) * 4);    
-                    // document.getElementById("thirdFade").style.opacity = 0;
-                    // document.getElementById("fourthFade").style.opacity = 0;
-                    // document.getElementById("fifthFade").style.opacity = 0;            
+                    document.getElementById("secondFade").style.opacity = (((this.value - 25) / 100 ) * 4);              
                 } else if(this.value <= 100 && this.value >= 75){
                     document.getElementById("secondFade").style.opacity = 1 - (((this.value - 75) / 100 ) * 4);0
                     document.getElementById("thirdFade").style.opacity = (((this.value - 75) / 100 ) * 4);
-                    // document.getElementById("firstFade").style.opacity = 0;
-                    // document.getElementById("fourthFade").style.opacity = 0;
-                    // document.getElementById("fifthFade").style.opacity = 0;
                 } else if(this.value <= 150 && this.value >= 125){
                     document.getElementById("thirdFade").style.opacity = 1 - (((this.value - 125) / 100 ) * 4);0
                     document.getElementById("fourthFade").style.opacity = (((this.value - 125) / 100 ) * 4);
-                    // document.getElementById("firstFade").style.opacity = 0;
-                    // document.getElementById("secondFade").style.opacity = 0;
-                    // document.getElementById("secondFade").style.opacity = 0;
                 } else if(this.value <= 200 && this.value >= 175){
                     document.getElementById("fourthFade").style.opacity = 1 - (((this.value - 175) / 100 ) * 4);0
                     document.getElementById("fifthFade").style.opacity = (((this.value - 175) / 100 ) * 4);
-                    // document.getElementById("firstFade").style.opacity = 0;
-                    // document.getElementById("secondFade").style.opacity = 0;
-                    // document.getElementById("thirdFade").style.opacity = 0;
                 }
 
                 if(this.value >= 0 && this.value <= 25){
@@ -108,11 +92,6 @@
                     document.getElementById("fourthFade").style.opacity = 0;
                     document.getElementById("fifthFade").style.opacity = 1; 
                 }
-
-                // 0-25 first
-                // 50-75 second
-                // 100 - 125 third
-                // 150 - 175 fourth
 
                 if(this.value > 90 && canChange){
                     changeClothes("denim");
@@ -254,7 +233,6 @@
                 <img src="ground.png" alt="">
             </div>
 
-
             <div id="behindCinderella">
                 <img src="alba.png" alt="">
             </div>
@@ -309,8 +287,14 @@
                 <img src="fitting room.png" alt="">
             </div>
 
+            <div>
+                <h3 id="storeText"><a href="#">Alba Denim</a></h3>
+            </div>
+
             <div class="slider">
+                
                 <input type="range" min="0" max="200" value="0" class="slider" id="slider" step="1">
+                <p id="slideMe"> <-- Slide me --></p>
             </div>
 
             <p class="text top-left" id="firstFade" style="opacity: 1;">Alba Denim is a luxury denim brand based in Edinburgh, with its manufacturing facilities dating back to 1913.</p>
@@ -326,10 +310,21 @@
             <p class="text bottom-right">With her new outfit, Cinderella was ready to go to the audition.</p>
         </div>
         <div class="panel" id="fourthPanel">
-            <p class="text top-left">On the day of the audition...</p>
-        </div>
-        <div class="panel">
+            <p class="text top-left">At the audition...</p>
             
+            <p id="interviewer" class="speech">Cinderella! You really look like one of <em>those that know!</em> We choose you!</p>
+
+            <img id="cinderellaAudition" src="oldClothes (22).png">
+
+            <p id="cinderellaAudText" class="speechRight">Yes! Thank you so much!</p>
+
+            <p class="text bottom-right">Cinderella told her godmother the good news and went home.</p>
+        </div>
+        <div class="panel" id="fifthPanel">
+            <div id="cinderellaFifthPanel">
+                <img src="cinderellaFirstPanel.png" alt="">
+                <p class="speech">I can't believe I made it! This is all thanks to <em>Alba Denim</em>!</p>
+            </div>
         </div>
       </article>    
 </body>

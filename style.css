@@ -13,6 +13,8 @@ html, body {
     padding-left: 4vmin;
     padding-top: 2vmin;
     padding-bottom: 2vmin;
+    align-items: center;
+    justify-content: center;
   }
   
   .panel {
@@ -80,7 +82,7 @@ html, body {
     transform:skew(-15deg);
     width:0;
   }
-  
+
   .speech:after {
     border:solid 10px transparent;
     border-left:solid 10px #fff;
@@ -91,6 +93,44 @@ html, body {
     left:27px;
     position:absolute;
     transform:skew(-15deg);
+    width:0;
+  }
+
+  .speechRight {
+    background-color:#fff;
+    border:solid 2px #000;
+    border-radius:12px;
+    display:inline-block;
+    margin:.5em;
+    padding:.5em 1em;
+    position:relative;
+    word-wrap: break-word;
+    text-align: center;
+  }
+  
+  .speechRight:before {
+    border:solid 12px transparent;
+    border-left:solid 12px #000;
+    border-top:solid 12px #000;
+    bottom:-24px;
+    content:"";
+    height:0;
+    right:23px;
+    position:absolute;
+    transform:skew(55deg);
+    width:0;
+  }
+
+  .speechRight:after {
+    border:solid 10px transparent;
+    border-left:solid 10px #fff;
+    border-top:solid 10px #fff;
+    bottom:-19px;
+    content:"";
+    height:0;
+    right:28px;
+    position:absolute;
+    transform:skew(55deg);
     width:0;
   }
   
@@ -106,10 +146,10 @@ html, body {
     background-color: rgb(129, 183, 255);
   }
   .panel:nth-child(4) {
-    flex-basis: 40%;
+    flex-basis: 50%;
   }
   .panel:nth-child(5) {
-    flex-basis: 40%;
+    flex-basis: 30%;
     background-color: rgb(129, 183, 255);
   }
 
@@ -402,6 +442,22 @@ html, body {
   left: 80%;
 }
 
+#storeText{
+  position:absolute;
+  left: 50%;
+  top: 220px;
+  transform: translate(-50%, 0%);
+}
+
+ #slideMe{
+  position:absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  bottom: 10px;
+  margin: 0;
+  padding: 0;
+ }
+
 /* THIRD PANEL END */
 
 /* FOURTH PANEL */
@@ -410,4 +466,56 @@ html, body {
   background-image: url(auditionRoom.png);
 }
 
+#interviewer{
+  left: 100px;
+  top: 200px;
+  max-width: 150px;
+}
+
+#cinderellaAudition{
+  position:absolute;
+  right: 0%;
+  bottom: 0px;
+  height: 460px;
+  transform: scaleX(-1);
+}
+
+#cinderellaAudText{
+  position:absolute;
+  right: 17%;
+  top: 25%;
+}
+
 /* FOURTH PANEL END*/
+
+/* FIFTH PANEL */
+
+#fifthPanel{
+  background: url(firstRoom.png);
+  background-size: cover;
+}
+
+#cinderellaFifthPanel{
+  position:absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#cinderellaFifthPanel img{
+  position:absolute;
+  height: 75%;
+  width: auto;
+  left: 50%;
+  bottom: 0px;
+  transform: translate(-50%, 0%);
+}
+
+#cinderellaFifthPanel p{
+  position:absolute;
+  max-width: 200px;
+  left: 66%;
+  top: 12%;
+  transform: translate(-50%, 0%);
+}
+
+/* FIFTH PANEL END*/

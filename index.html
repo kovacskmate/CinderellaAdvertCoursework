@@ -130,6 +130,11 @@
 </head>
 <body>
     <article class="comic">
+
+        <div class="panel" id="logoPanel">
+            <a href="#"><img src="topLogo.png" alt=""></a>
+        </div>
+
         <div class="panel" id="firstPanel">
             <p class="text top-left">The girl group Prince Charming which Cinderella has been dreaming ofjoining for ages is in town and holding an audition tomorrow, however there is a problem.</p>
             <div id="cinderellaFirstPanel">
@@ -149,6 +154,15 @@
                         </tr>
                         <tr>
                             <td>
+                                Anastasia
+                                <div>
+                                    <i class="fas fa-envelope fa-lg"></i>
+                                    <i class="fas fa-phone fa-lg"></i>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
                                 Bruno
                                 <div>
                                     <i class="fas fa-envelope fa-lg"></i>
@@ -158,7 +172,16 @@
                         </tr>
                         <tr>
                             <td>
-                                Gus
+                                Drizella
+                                <div>
+                                    <i class="fas fa-envelope fa-lg"></i>
+                                    <i class="fas fa-phone fa-lg"></i>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Father
                                 <div>
                                     <i class="fas fa-envelope fa-lg"></i>
                                     <i class="fas fa-phone fa-lg"></i>
@@ -176,23 +199,50 @@
                         </tr>
                         <tr>
                             <td>
-                                Father
+                                Gus
                                 <div>
                                     <i class="fas fa-envelope fa-lg"></i>
                                     <i class="fas fa-phone fa-lg"></i>
                                 </div>
                             </td>
                         </tr>
+                        <tr>
+                            <td>
+                                Jaq
+                                <div>
+                                    <i class="fas fa-envelope fa-lg"></i>
+                                    <i class="fas fa-phone fa-lg"></i>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Lady Tremaine
+                                <div>
+                                    <i class="fas fa-envelope fa-lg"></i>
+                                    <i class="fas fa-phone fa-lg"></i>
+                                </div>
+                            </td>
+                        </tr>     
+                        <tr>
+                            <td>
+                                Mother
+                                <div>
+                                    <i class="fas fa-envelope fa-lg"></i>
+                                    <i class="fas fa-phone fa-lg"></i>
+                                </div>
+                            </td>
+                        </tr>                  
                     </table>
                 </div>
                 <div id="phoneScreen2" class="phoneScreen">
-                    <div id="callInfoTop" style="background-color: aqua;">
+                    <div id="callInfoTop">
                         <h6 id="callDur">0:32</h6>
                         <h1 id="godMom">Godmother</h1>
                         <h5 id="mobileNum">Mobile +12 345 6789</h5>
                         <h6 id="inCall">IN CALL</h6>
                     </div>
-                    <div id="callInfoBottom" style="background-color: blueviolet;">                        
+                    <div id="callInfoBottom">                        
                         <div>
                             <i class="fas fa-phone-volume fa-2x"></i>
                             <h5>Extra volume</h5>
@@ -223,10 +273,9 @@
                         </div>
                     </div>
                 </div>  
-                <p id="textMessage" class="speech">Hello Cinderella! Sure thing, we'll get you some clothes! Go to Alba Denim and buy what you need. And don't worry about the money!</p>
-                <!-- <a id="playButton" class="round-button"><i class="fa fa-play fa-2x"></i></a> -->
+                <p id="textMessage" class="speech">Hello Cinderella! Sure thing, we'll get you some clothes! Go to <a href="#">Alba Denim</a> and buy what you need! And don't worry about the money.</p>
             </div>
-            <p class="text bottom-right">Overcome with joy, Cinderella headed to Alba Denim.</p>
+            <p class="text bottom-right">Overcome with joy, Cinderella headed to <a href="#">Alba Denim</a>.</p>
         </div>
         <div class="panel" id="thirdPanel">
             <div id="ground">
@@ -287,17 +336,17 @@
                 <img src="fitting room.png" alt="">
             </div>
 
-            <div>
-                <h3 id="storeText"><a href="#">Alba Denim</a></h3>
+            <div id="storeLogoDiv">
+                <a href="#"><img id="storeText" src="storeLogo.png" alt=""></a>
             </div>
 
             <div class="slider">
-                
+                <p id="slideMe">Slide me</p>
                 <input type="range" min="0" max="200" value="0" class="slider" id="slider" step="1">
-                <p id="slideMe"> <-- Slide me --></p>
+                
             </div>
 
-            <p class="text top-left" id="firstFade" style="opacity: 1;">Alba Denim is a luxury denim brand based in Edinburgh, with its manufacturing facilities dating back to 1913.</p>
+            <p class="text top-left" id="firstFade" style="opacity: 1;"><a href="#">Alba Denim</a> is a luxury denim brand based in Edinburgh, with its manufacturing facilities dating back to 1913.</p>
 
             <p class="text top-left" id="secondFade" style="opacity: 0;">All our denim is weaved on original 1950s looms, ring spun and at a relatively heavy weight of 12 ounces.</p>
 
@@ -312,7 +361,7 @@
         <div class="panel" id="fourthPanel">
             <p class="text top-left">At the audition...</p>
             
-            <p id="interviewer" class="speech">Cinderella! You really look like one of <em>those that know!</em> We choose you!</p>
+            <p id="interviewer" class="speech">Cinderella! You really look like one of <strong><em>those that know</em></strong>! We choose you!</p>
 
             <img id="cinderellaAudition" src="jump.png">
 
@@ -323,7 +372,7 @@
         <div class="panel" id="fifthPanel">
             <div id="cinderellaFifthPanel">
                 <img src="lastCinderella.png" alt="">
-                <p class="speech">I can't believe I made it! This is all thanks to <em>Alba Denim</em>!</p>
+                <p class="speech">I can't believe I made it! This is all thanks to <a href="#">Alba Denim</a>!</p>
             </div>
         </div>
       </article>    

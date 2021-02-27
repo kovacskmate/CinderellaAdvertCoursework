@@ -133,25 +133,52 @@ html, body {
     transform:skew(55deg);
     width:0;
   }
-  
+
   .panel:nth-child(1) {
-    flex-basis: 60%;
-    background-color: rgb(129, 183, 255);
-  }
-  .panel:nth-child(2) {
-    flex-basis: 30%;
-  }
-  .panel:nth-child(3) {
     flex-basis: 100%;
     background-color: rgb(129, 183, 255);
   }
+  
+  .panel:nth-child(2) {
+    flex-basis: 60%;
+    background-color: rgb(129, 183, 255);
+  }
+  .panel:nth-child(3) {
+    flex-basis: 30%;
+  }
   .panel:nth-child(4) {
-    flex-basis: 50%;
+    flex-basis: 100%;
+    background-color: rgb(129, 183, 255);
   }
   .panel:nth-child(5) {
+    flex-basis: 50%;
+  }
+  .panel:nth-child(6) {
     flex-basis: 30%;
     background-color: rgb(129, 183, 255);
   }
+
+  /* LOGO PANEL */
+
+
+  #logoPanel{
+    /* min-width: 600px;
+    max-width: 600px; */
+    width: 100%;
+    height: 130px;
+    background-color: black;
+  }
+  
+  #logoPanel img{
+    position:absolute;
+    height: 130px;
+    width: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* LOGO PANEL END */
 
 
  /* FIRST PANEL */
@@ -219,7 +246,7 @@ html, body {
   width: 218px;
   top: 169px;
   transform: translate(-50%, 0%);
-  background-color: #e2e2e2;
+  background-color: #ffffff;
 }
 
 #phoneScreen2{
@@ -235,19 +262,15 @@ html, body {
   padding: 8px;
 }
 
-#contacts tr:nth-child(even){background-color: #fdfdfd;}
+#contacts tr:nth-child(even){background-color: #eeeeee;}
 
 #contacts th {
-  border: 1px solid rgb(0, 0, 0);
+  /* border: 1px solid rgb(0, 0, 0); */
   color: white;
   width: 100%;
   text-align: center;
   background-color: rgb(31, 31, 31);
   font-size: 18px;
-}
-
-#contacts td{
-  border: 1px solid rgb(0, 0, 0);
 }
 
 #contacts td i{
@@ -268,18 +291,20 @@ html, body {
 
 #call:hover{
   cursor: pointer;
-  text-shadow: 0px 0px 10px rgb(0, 252, 252, 1),
-                0px 0px 12px rgba(0, 252, 252, 1);
+  text-shadow: 0px 0px 10px rgba(136, 146, 0, 1),
+                0px 0px 12px rgba(136, 146, 0, 1);
 }
 
 #callInfoTop{
   height: 30%;
+  background-color: #f7f7f7;
 }
 
 #callInfoBottom{
   height: 70%;
   display: flex;
   flex-flow: row wrap;
+  background-color: #bebebe;
 }
 
 #callDur{
@@ -358,6 +383,7 @@ html, body {
   bottom: 7px;
   position: absolute;
   left: 50%;
+  border-radius: 15px;
   transform: translate(-50%, 0%);
 }
 
@@ -366,8 +392,13 @@ html, body {
   appearance: none;
   width: 40px;
   height: 40px;
-  background: #63283a;
+  background: #bef1cf;
   cursor: pointer;
+  border-radius: 25px;
+}
+
+.slider:hover::-webkit-slider-thumb {
+  background: #97ffba;
 }
 
 #changingRoom{
@@ -443,10 +474,17 @@ html, body {
   left: 77%;
 }
 
+#storeLogoDiv{
+  height: 100%;
+  width: 100%;
+}
+
 #storeText{
   position:absolute;
   left: 50%;
-  top: 220px;
+  top: 242px;
+  height: 46px;
+  width: auto;
   transform: translate(-50%, 0%);
 }
 

@@ -2,6 +2,10 @@ html, body {
     background-color: rgb(255, 255, 255);
 }
 
+*{
+    font-family: 'Oswald', sans-serif;
+}
+
 .carousel-item.active,
 .carousel-item-next,
 .carousel-item-prev{
@@ -30,13 +34,19 @@ html, body {
     height: 35px;
 }
 
+#carouselContent{
+    text-transform: uppercase;
+}
+
+.navbar{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
 .navbar .navbar-nav .nav-link:hover {
     color: #000000;
   }
   @media only screen and (min-width: 960px) {
-    .navbar .navbar-nav .nav-link {
-      padding: 1em 0.7em;
-    }
     .navbar {
       padding: 0;
     }
@@ -53,7 +63,7 @@ html, body {
     left: 0;
     right: 0;
     margin: auto;
-    background-color: #000000;
+    background-color: #0066cc;
     color: transparent;
     width: 0%;
     content: '';
@@ -63,7 +73,66 @@ html, body {
     width: 100%;
   }
 
-  .navbar-custom{
-      height: 50px;
-      
-  }
+.nav-item a {
+    color: black !important;
+}
+
+.navbar-nav li{
+    padding-right: 20px;
+}
+
+.navbar-custom{
+    height: 50px;    
+    text-transform: uppercase;
+}
+
+#albaBrand{
+    height: 35px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.alignMiddle{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.largerFontSize{
+    font-size: 18px;
+}
+
+.flexContainer{
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.flexMe{
+    display:inline-block;
+    flex:1 1;
+    height:auto;
+    overflow:hidden;
+    position:relative;
+    text-align: center;
+}
+
+.flexMe:nth-child(1){
+    background-color: blanchedalmond;
+    flex-basis: 100%;
+}
+
+.flexMe:nth-child(2){
+    background-color: blanchedalmond;
+    flex-basis: 50%;
+}
+
+.flexMe:nth-child(3){
+    background-color: blanchedalmond;
+    flex-basis: 50%;
+}

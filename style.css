@@ -392,23 +392,13 @@ html, body {
   appearance: none;
   width: 40px;
   height: 40px;
-  background: #bef1cf;
+  background: #80d0ff;
   cursor: pointer;
   border-radius: 25px;
 }
 
 .slider:hover::-webkit-slider-thumb {
-  background: #97ffba;
-}
-
-#changingRoom{
-  width: 15%;
-  height: 100%;
-  position: absolute;
-  left: 50%;
-  background-color: aqua;
-  transform: translate(-50%, -50%);
-  top: 50%;
+  background: #4eb7fd;
 }
 
 #ground img{
@@ -548,7 +538,7 @@ html, body {
   transform: translate(-50%, 0%);
 }
 
-#cinderellaFifthPanel p{
+#lastSpeech{
   position:absolute;
   max-width: 200px;
   left: 70%;

@@ -16,9 +16,38 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-
-
     <title>Alba Denim</title>
+
+
+    <script>
+        $(document).ready(function() {
+            var flexMe1 = document.getElementById("flexMe1");
+            flexMe1.onmouseover = function(){
+                document.getElementById("addToCart1").style.visibility = "visible";
+            };
+            flexMe1.onmouseout = function(){
+                document.getElementById("addToCart1").style.visibility = "hidden";
+            };
+
+            var flexMe2 = document.getElementById("flexMe2");
+            flexMe2.onmouseover = function(){
+                document.getElementById("addToCart2").style.visibility = "visible";
+            };
+            flexMe2.onmouseout = function(){
+                document.getElementById("addToCart2").style.visibility = "hidden";
+            };
+
+            var flexMe3 = document.getElementById("flexMe3");
+            flexMe3.onmouseover = function(){
+                document.getElementById("addToCart3").style.visibility = "visible";
+            };
+            flexMe3.onmouseout = function(){
+                document.getElementById("addToCart3").style.visibility = "hidden";
+            };
+            
+        });
+    </script>
+
 </head>
 <body>
     <header>
@@ -60,7 +89,7 @@
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Shop in
+                      Currency
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                       <a class="dropdown-item" href="#">GBP</a>
@@ -120,8 +149,24 @@
     <main>
         <div class="flexContainer">
             <div class="flexMe">SALE</div>
-            <div class="flexMe">Flex item 2</div>
-            <div class="flexMe">Flex item 2</div>
+            <div id="flexMe1" class="flexMe">
+                <img src="./jeans/jeans1.webp" alt="Couldn't load image">
+                <p>Cool jeans</p>
+                <p>99$</p>
+                <button id="addToCart1" type="button" class="btn btn-primary customButton">Add to cart</button>
+            </div>
+            <div id="flexMe2" class="flexMe">
+                <img src="./jeans/jeans2.jpg" alt="Couldn't load image">
+                <p>Cool jeans</p>
+                <p>99$</p>
+                <button id="addToCart2" type="button" class="btn btn-primary customButton">Add to cart</button>
+            </div>
+            <div id="flexMe3" class="flexMe">
+                <img src="./jeans/jeans3.webp" alt="Couldn't load image">
+                <p>Cool jeans</p>
+                <p>99$</p>
+                <button id="addToCart3" type="button" class="btn btn-primary customButton">Add to cart</button>
+            </div>
         </div>
     </main>
     <!-- Footer -->

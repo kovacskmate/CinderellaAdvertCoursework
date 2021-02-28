@@ -109,30 +109,53 @@ html, body {
     flex-wrap:wrap;
     align-items: center;
     justify-content: center;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
+    height: auto;
 }
 
 .flexMe{
     display:inline-block;
     flex:1 1;
-    height:auto;
     overflow:hidden;
     position:relative;
     text-align: center;
+    min-width: 400px;
+    padding-bottom: 15px;
+}
+
+.flexMe img{
+    height: 500px;
+    width: auto;
+    object-fit: contain;
+    padding-left: 15%;
+    padding-right: 15%;    
+}
+
+.flexMe p{
+    margin: 0;
+    padding: 0;
 }
 
 .flexMe:nth-child(1){
-    background-color: blanchedalmond;
     flex-basis: 100%;
+    font-size: 30px;
+    font-weight: 700;
 }
 
 .flexMe:nth-child(2){
-    background-color: blanchedalmond;
-    flex-basis: 50%;
+    flex-basis: 25%;
 }
 
 .flexMe:nth-child(3){
-    background-color: blanchedalmond;
-    flex-basis: 50%;
+    flex-basis: 25%;
+}
+
+.flexMe:nth-child(4){
+    flex-basis: 25%;
+}
+
+.customButton{
+    visibility: hidden;
 }

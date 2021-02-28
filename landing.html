@@ -44,6 +44,22 @@
             flexMe3.onmouseout = function(){
                 document.getElementById("addToCart3").style.visibility = "hidden";
             };
+
+            var flexMe4 = document.getElementById("flexMe4");
+            flexMe4.onmouseover = function(){
+                document.getElementById("addToCart4").style.visibility = "visible";
+            };
+            flexMe4.onmouseout = function(){
+                document.getElementById("addToCart4").style.visibility = "hidden";
+            };
+
+            var flexMe5 = document.getElementById("flexMe5");
+            flexMe5.onmouseover = function(){
+                document.getElementById("addToCart5").style.visibility = "visible";
+            };
+            flexMe5.onmouseout = function(){
+                document.getElementById("addToCart5").style.visibility = "hidden";
+            };
             
         });
     </script>
@@ -52,13 +68,16 @@
 <body>
     <header>
         <div id="carouselContent" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner" role="listbox">
+            <div class="carousel-inner customCarousel" role="listbox">
                 <div class="carousel-item active">
-                     <p>Selling that</p>
+                     <p>Jeans from £49.99. Prices as marked. <a href="#">Details.</a></p>
                 </div>
                 <div class="carousel-item">                    
-                    <p>Selling this</p>
+                    <p>Free shipping on all orders over £150!</p>
                 </div>
+                <div class="carousel-item">
+                  <p style="color: rgb(196, 0, 0);">Regarding COVID-19. <a href="#">Details.</a></p>
+             </div>
             </div>
             <a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -92,8 +111,8 @@
                       Currency
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item" href="#">GBP</a>
-                      <a class="dropdown-item" href="#">EUR</a>
+                      <a class="dropdown-item" href="#">GBP £</a>
+                      <a class="dropdown-item" href="#">EUR €</a>
                     </div>
                   </li>
                 </ul>
@@ -136,37 +155,54 @@
                     <a class="nav-link" href="#">Kids</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Sale</a>
+                    <a class="nav-link" href="#">On Sale</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Alba Denim Stories </a>
                 </li>
               </ul>
 
               <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search products" aria-label="Search">
               </form>
             </div>
           </nav>
     </header>
     <main>
+        <div id="newLine"></div>
+
         <div class="flexContainer">
-            <div class="flexMe">SALE</div>
+            <div class="flexMe">NEW-IN</div>
             <div id="flexMe1" class="flexMe">
                 <img src="./jeans/jeans1.webp" alt="Couldn't load image">
-                <p>Cool jeans</p>
-                <p>99$</p>
+                <p><a href="#">Classic slim jeans</a></p>
+                <p>£79.00</p>
                 <button id="addToCart1" type="button" class="btn btn-primary customButton">Add to cart</button>
             </div>
             <div id="flexMe2" class="flexMe">
                 <img src="./jeans/jeans2.jpg" alt="Couldn't load image">
-                <p>Cool jeans</p>
-                <p>99$</p>
+                <p><a href="#">Skinny jeans</a></p>
+                <p>£79.00</p>
                 <button id="addToCart2" type="button" class="btn btn-primary customButton">Add to cart</button>
             </div>
             <div id="flexMe3" class="flexMe">
                 <img src="./jeans/jeans3.webp" alt="Couldn't load image">
-                <p>Cool jeans</p>
-                <p>99$</p>
+                <p><a href="#">Ripped straight jeans</a></p>
+                <p>£79.00</p>
                 <button id="addToCart3" type="button" class="btn btn-primary customButton">Add to cart</button>
             </div>
+            <div id="flexMe4" class="flexMe">
+              <img src="./jeans/jeans4.jpg" alt="Couldn't load image">
+              <p><a href="#">Old-school straight jeans</a></p>
+              <p>£99.00</p>
+              <button id="addToCart4" type="button" class="btn btn-primary customButton">Add to cart</button>
+          </div>
+          <div id="flexMe5" class="flexMe">
+            <img src="./jeans/jeans5.jfif" alt="Couldn't load image">
+            <p><a href="#">Shaping skinny jeans</a></p>
+            <p>£109.00</p>
+            <button id="addToCart5" type="button" class="btn btn-primary customButton">Add to cart</button>
+        </div>
         </div>
     </main>
     <!-- Footer -->

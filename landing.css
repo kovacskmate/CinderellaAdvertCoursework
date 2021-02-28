@@ -12,6 +12,25 @@ html, body {
     display:block;
 }
 
+.customCarousel{
+    text-transform: none !important;
+    
+}
+
+.customCarousel div p a{
+    text-decoration: underline;
+    color: white !important;
+}
+
+.flexMe a{
+    color: black !important;
+    text-decoration: underline !important;
+}
+
+.flexMe a:hover{
+    color: #0066cc !important;    
+}
+
 .carousel-item{
     position: relative;
     height:100%;
@@ -158,4 +177,13 @@ html, body {
 
 .customButton{
     visibility: hidden;
+    text-transform: uppercase;
+}
+
+#newLine{
+    width: 100%;
+    height: 800px;
+    background-color: aqua;
+    margin: 0 !important;
+    padding: 0 !important;
 }

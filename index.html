@@ -11,6 +11,8 @@
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="splashAdvert.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@1,700&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/59202bfd86.js" crossorigin="anonymous"></script>
     <script>
@@ -37,59 +39,61 @@
 
             function animationTimer(){
                 canAnimate = true;                
-            }
+            };
 
             function changeClothes(name){
                 for(var i = 0; i < imgNum; i++){
                     document.getElementById("cinderella" + i).src = name + " (" + (i + 1) + ").png";
                 }                
-            }         
+            };
 
-            var slider = document.getElementById("slider");
+            function DoSomething(){
+                console.log("helo");
+            }
 
-            slider.oninput = function() {
+            function MoveCinderella(rangeValue){
 
-                if(this.value <= 50 && this.value >= 25){
-                    document.getElementById("firstFade").style.opacity = 1 - (((this.value - 25) / 100 ) * 4);
-                    document.getElementById("secondFade").style.opacity = (((this.value - 25) / 100 ) * 4);              
-                } else if(this.value <= 100 && this.value >= 75){
-                    document.getElementById("secondFade").style.opacity = 1 - (((this.value - 75) / 100 ) * 4);0
-                    document.getElementById("thirdFade").style.opacity = (((this.value - 75) / 100 ) * 4);
-                } else if(this.value <= 150 && this.value >= 125){
-                    document.getElementById("thirdFade").style.opacity = 1 - (((this.value - 125) / 100 ) * 4);0
-                    document.getElementById("fourthFade").style.opacity = (((this.value - 125) / 100 ) * 4);
-                } else if(this.value <= 200 && this.value >= 175){
-                    document.getElementById("fourthFade").style.opacity = 1 - (((this.value - 175) / 100 ) * 4);0
-                    document.getElementById("fifthFade").style.opacity = (((this.value - 175) / 100 ) * 4);
+                if(rangeValue <= 50 && rangeValue >= 25){
+                    document.getElementById("firstFade").style.opacity = 1 - (((rangeValue - 25) / 100 ) * 4);
+                    document.getElementById("secondFade").style.opacity = (((rangeValue - 25) / 100 ) * 4);              
+                } else if(rangeValue <= 100 && rangeValue >= 75){
+                    document.getElementById("secondFade").style.opacity = 1 - (((rangeValue - 75) / 100 ) * 4);0
+                    document.getElementById("thirdFade").style.opacity = (((rangeValue - 75) / 100 ) * 4);
+                } else if(rangeValue <= 150 && rangeValue >= 125){
+                    document.getElementById("thirdFade").style.opacity = 1 - (((rangeValue - 125) / 100 ) * 4);0
+                    document.getElementById("fourthFade").style.opacity = (((rangeValue - 125) / 100 ) * 4);
+                } else if(rangeValue <= 200 && rangeValue >= 175){
+                    document.getElementById("fourthFade").style.opacity = 1 - (((rangeValue - 175) / 100 ) * 4);0
+                    document.getElementById("fifthFade").style.opacity = (((rangeValue - 175) / 100 ) * 4);
                 }
 
-                if(this.value >= 0 && this.value <= 25){
+                if(rangeValue >= 0 && rangeValue <= 25){
                     document.getElementById("firstFade").style.opacity = 1;
                     document.getElementById("secondFade").style.opacity = 0;
                     document.getElementById("thirdFade").style.opacity = 0;
                     document.getElementById("fourthFade").style.opacity = 0;
                     document.getElementById("fifthFade").style.opacity = 0; 
-                } else if(this.value >= 50 && this.value <= 75){
+                } else if(rangeValue >= 50 && rangeValue <= 75){
                     document.getElementById("firstFade").style.opacity = 0;
                     document.getElementById("secondFade").style.opacity = 1;
                     document.getElementById("thirdFade").style.opacity = 0;
                     document.getElementById("fourthFade").style.opacity = 0;
                     document.getElementById("fifthFade").style.opacity = 0; 
                 }
-                else if(this.value >= 100 && this.value <= 125){
+                else if(rangeValue >= 100 && rangeValue <= 125){
                     document.getElementById("firstFade").style.opacity = 0;
                     document.getElementById("secondFade").style.opacity = 0;
                     document.getElementById("thirdFade").style.opacity = 1;
                     document.getElementById("fourthFade").style.opacity = 0;
                     document.getElementById("fifthFade").style.opacity = 0; 
                 }
-                else if(this.value >= 150 && this.value <= 175){
+                else if(rangeValue >= 150 && rangeValue <= 175){
                     document.getElementById("firstFade").style.opacity = 0;
                     document.getElementById("secondFade").style.opacity = 0;
                     document.getElementById("thirdFade").style.opacity = 0;
                     document.getElementById("fourthFade").style.opacity = 1;
                     document.getElementById("fifthFade").style.opacity = 0; 
-                } else if(this.value == 200){
+                } else if(rangeValue == 200){
                     document.getElementById("firstFade").style.opacity = 0;
                     document.getElementById("secondFade").style.opacity = 0;
                     document.getElementById("thirdFade").style.opacity = 0;
@@ -97,10 +101,10 @@
                     document.getElementById("fifthFade").style.opacity = 1; 
                 }
 
-                if(this.value > 90 && canChange){
+                if(rangeValue > 90 && canChange){
                     changeClothes("denim");
                     canChange = false;
-                } else if(this.value <= 90 && !canChange){
+                } else if(rangeValue <= 90 && !canChange){
                     changeClothes("oldClothes");
                     canChange = true;
                 }
@@ -108,7 +112,7 @@
                 if(canAnimate)
                 {
                     canAnimate = false;
-                    currValue = this.value;
+                    currValue = rangeValue;
                     setTimeout(animationTimer, 2);
                     if(currValue>prevValue){
                         nImg++;                          
@@ -125,10 +129,55 @@
                         $(this).removeClass("show")            
                     });
                     $(".animated").eq(nImg).addClass("show");                    
-                    document.getElementById("moveCinderella").style.left = (this.value / 2) + "%";                    
-                    prevValue = this.value;               
+                    document.getElementById("moveCinderella").style.left = (rangeValue / 2) + "%";                    
+                    prevValue = rangeValue;               
                 }
             };
+
+            var slider = document.getElementById("slider");
+
+            slider.oninput = function() {
+                MoveCinderella(this.value);
+            };
+
+            var i = 0, timeOut = 0;
+  
+            $('#slideRight1').on('mousedown touchstart', function(e) {
+                timeOut = setInterval(function(){                
+                $("#slider").val(parseInt($("#slider").val())+1);
+                MoveCinderella($("#slider").val());
+                }, 37);
+            }).bind('mouseup mouseleave touchend', function() {
+                clearInterval(timeOut);
+            });
+
+            $('#slideLeft1').on('mousedown touchstart', function(e) {
+                timeOut = setInterval(function(){
+                $("#slider").val(parseInt($("#slider").val())-1);
+                MoveCinderella($("#slider").val());
+                }, 37);
+            }).bind('mouseup mouseleave touchend', function() {
+                clearInterval(timeOut);
+            }); 
+            
+            $('#slideRight2').on('mousedown touchstart', function(e) {
+                timeOut = setInterval(function(){                
+                $("#slider").val(parseInt($("#slider").val())+1);
+                MoveCinderella($("#slider").val());
+                }, 37);
+            }).bind('mouseup mouseleave touchend', function() {
+                clearInterval(timeOut);
+            });
+
+            $('#slideLeft2').on('mousedown touchstart', function(e) {
+                timeOut = setInterval(function(){
+                $("#slider").val(parseInt($("#slider").val())-1);
+                MoveCinderella($("#slider").val());
+                }, 37);
+            }).bind('mouseup mouseleave touchend', function() {
+                clearInterval(timeOut);
+            });  
+
         });
     </script>        
 </head>
@@ -344,10 +393,16 @@
                 <a href="landing.html"><img id="storeText" src="storeLogo.png" alt=""></a>
             </div>
 
+            
             <div class="slider">
+                <div class="arrow-left arrowLeft1" id="slideLeft1"></div>
+                <div class="arrow-right arrowRight1" id="slideRight1"></div> 
                 <p id="slideMe">Slide me</p>
-                <input type="range" min="0" max="200" value="0" class="slider" id="slider" step="1">                
+                <input type="range" min="0" max="200" value="0" class="slider" id="slider" step="1">    
+                <div class="arrow-left arrowLeft2" id="slideLeft2"></div>
+                <div class="arrow-right arrowRight2" id="slideRight2"></div>            
             </div>
+           
 
             <p class="text top-left" id="firstFade" style="opacity: 1;"><a id="albaLink" href="landing.html">Alba Denim</a> is a luxury denim brand based in Edinburgh, with its manufacturing facilities dating back to 1913.</p>
 

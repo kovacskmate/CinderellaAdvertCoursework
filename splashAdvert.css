@@ -9,7 +9,8 @@ html, body {
   .comic {
     display:flex;
     flex-wrap:wrap;
-    font-family:'Comic Sans', cursive;
+    /* font-family:'Comic Sans MS', cursive !important; */
+    font-family: 'Comic Neue', cursive;
     padding-left: 4vmin;
     padding-top: 2vmin;
     padding-bottom: 2vmin;
@@ -406,6 +407,54 @@ html, body {
 
 .slider:hover::-webkit-slider-thumb {
   background: #4eb7fd;
+}
+
+.arrowLeft1{
+  position: absolute;
+  left: 6%;
+  bottom: -3px;
+}
+
+.arrowRight1{
+  position: absolute;
+  left: 11%;
+  bottom: -3px;
+}
+
+.arrowLeft2{
+  position: absolute;
+  right: 11%;
+  bottom: -3px;
+}
+
+.arrowRight2{
+  position: absolute;
+  right: 6%;
+  bottom: -3px;
+}
+
+.arrow-right {
+  width: 0; 
+  height: 0; 
+  border-top: 26px solid transparent;
+  border-bottom: 26px solid transparent;  
+  border-left: 26px solid #80d0ff;
+}
+
+.arrow-right:hover{
+  border-left: 26px solid #4eb7fd;
+}
+
+.arrow-left {
+  width: 0; 
+  height: 0; 
+  border-top: 26px solid transparent;
+  border-bottom: 26px solid transparent;   
+  border-right:26px solid #80d0ff; 
+}
+
+.arrow-left:hover{
+  border-right: 26px solid #4eb7fd;
 }
 
 #ground img{

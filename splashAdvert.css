@@ -168,7 +168,6 @@ html, body {
 
   /* LOGO PANEL */
 
-
   #logoPanel{
     /* min-width: 600px;
     max-width: 600px; */
@@ -188,10 +187,9 @@ html, body {
 
   /* LOGO PANEL END */
 
-
  /* FIRST PANEL */
 #firstPanel{
-  background-image: url(firstRoom.png);
+  background-image: url(./comic/firstRoom.png);
   background-size: cover;
 }
 
@@ -221,7 +219,7 @@ html, body {
 
 /* SECOND PANEL */
 #secondPanel{
-  background-image: url(phoneBg.png);
+  background-image: url(./comic/phoneBg.png);
   background-repeat: no-repeat;
   background-size: contain;
   min-width: 600px;
@@ -494,12 +492,8 @@ html, body {
 }
 
 #thirdPanel{
-  background-image: url(background.png);
+  background-image: url(./comic/background.png);
   background-size: cover;
-}
-
-#firstFade{
-  
 }
 
 #secondFade{
@@ -548,7 +542,7 @@ html, body {
 /* FOURTH PANEL */
 
 #fourthPanel{
-  background-image: url(auditionRoom.png);
+  background-image: url(./comic/auditionRoom.png);
 }
 
 #interviewer{
@@ -575,7 +569,7 @@ html, body {
 /* FIFTH PANEL */
 
 #fifthPanel{
-  background: url(firstRoom.png);
+  background: url(./comic/firstRoom.png);
   background-size: cover;
 }
 

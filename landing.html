@@ -61,7 +61,9 @@
             };
             flexMe5.onmouseout = function(){
                 document.getElementById("addToCart5").style.visibility = "hidden";
-            };            
+            };
+
+            $('[data-toggle="popover"]').popover();
         });
     </script>
 </head>
@@ -70,13 +72,13 @@
         <div id="carouselContent" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner customCarousel" role="listbox">
                 <div class="carousel-item active">
-                     <p>Jeans from £49.99. <a href="#">Details.</a></p>
+                     <p>Jeans from £49.99. <a href="jeans49.html" >Details.</a></p>
                 </div>
                 <div class="carousel-item">                    
                     <p>Free shipping on all orders over £150!</p>
                 </div>
                 <div class="carousel-item">
-                  <p style="color: rgb(196, 0, 0);">Regarding COVID-19. <a href="#">Details.</a></p>
+                  <p style="color: rgb(196, 0, 0);">Regarding COVID-19. <a href="covid.html">Details.</a></p>
              </div>
             </div>
             <a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
@@ -168,7 +170,9 @@
       <div id="newLineContent">
         <p style="text-transform:uppercase; font-weight: 700; font-size: 28px;">Introducing the Prince Charming collection</p>
         <p style="font-size: 20px;">Jeans and complimentary garments for women and men</p>
-        <button type="button" class="btn btn-primary">DETAILS</button>
+        <button type="button" class="btn btn-primary" id="customPopover" data-toggle="popover" title="Covid-19" data-placement="top" data-content="This collection's denim are all about freshness and quality, with hours-long treatmens, mixed fabrics and defining details.">DETAILS</button>
+
+        
       </div>
     </div>
 

@@ -238,3 +238,8 @@ html, body {
     font-size: larger;
     font-weight: 700;
 }
+
+.popover-body {
+    font-size: 20px;
+    text-align: center;
+}

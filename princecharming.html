@@ -20,76 +20,34 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-    <title>Alba Denim - Home</title>
+    <title>Alba Denim - Prince Charming Collection</title>
     <script>
-        $(document).ready(function() {
-            var flexMe1 = document.getElementById("flexMe1");
-            flexMe1.onmouseover = function(){
-                document.getElementById("addToCart1").style.visibility = "visible";
-            };
-            flexMe1.onmouseout = function(){
-                document.getElementById("addToCart1").style.visibility = "hidden";
-            };
-
-            var flexMe2 = document.getElementById("flexMe2");
-            flexMe2.onmouseover = function(){
-                document.getElementById("addToCart2").style.visibility = "visible";
-            };
-            flexMe2.onmouseout = function(){
-                document.getElementById("addToCart2").style.visibility = "hidden";
-            };
-
-            var flexMe3 = document.getElementById("flexMe3");
-            flexMe3.onmouseover = function(){
-                document.getElementById("addToCart3").style.visibility = "visible";
-            };
-            flexMe3.onmouseout = function(){
-                document.getElementById("addToCart3").style.visibility = "hidden";
-            };
-
-            var flexMe4 = document.getElementById("flexMe4");
-            flexMe4.onmouseover = function(){
-                document.getElementById("addToCart4").style.visibility = "visible";
-            };
-            flexMe4.onmouseout = function(){
-                document.getElementById("addToCart4").style.visibility = "hidden";
-            };
-
-            var flexMe5 = document.getElementById("flexMe5");
-            flexMe5.onmouseover = function(){
-                document.getElementById("addToCart5").style.visibility = "visible";
-            };
-            flexMe5.onmouseout = function(){
-                document.getElementById("addToCart5").style.visibility = "hidden";
-            };
-
-            $('[data-toggle="popover"]').popover({html:true});
-        });
+       
     </script>
 </head>
 <body>
     <header>
-        <div id="carouselContent" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner customCarousel" role="listbox">
-                <div class="carousel-item active">
-                     <p>Jeans from £49.99. <a href="jeans49.html" >Details.</a></p>
-                </div>
-                <div class="carousel-item">                    
-                    <p>Free shipping on all orders over £150!</p>
-                </div>
-                <div class="carousel-item">
-                  <p style="color: rgb(196, 0, 0);">Regarding COVID-19. <a href="covid.html">Details.</a></p>
-             </div>
+      <div id="carouselContent" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner customCarousel" role="listbox">
+            <div class="carousel-item active">
+                 <p>Jeans from £49.99. <a href="jeans49.html" >Details.</a></p>
             </div>
-            <a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselContent" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+            <div class="carousel-item">                    
+                <p>Free shipping on all orders over £150!</p>
+            </div>
+            <div class="carousel-item">
+              <p style="color: rgb(196, 0, 0);">Regarding COVID-19. <a href="covid.html">Details.</a></p>
+         </div>
         </div>
+        <a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselContent" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
 
         <img id="albaBrand" src="./landingImages/albaBrand.png" alt="">                
 
@@ -166,49 +124,10 @@
           </nav>
     </header>
 
-    <div id="newLine">
-      <div id="newLineContent">
-        <p style="text-transform:uppercase; font-weight: 700; font-size: 28px;">Introducing the Prince Charming collection</p>
-        <p style="font-size: 20px;">Jeans and complimentary garments for women and men</p>
-        <button type="button" class="btn btn-primary" id="customPopover" data-toggle="popover" title="Covid-19" data-placement="top" data-content="This collection's denim are all about freshness and quality, with hours-long treatmens, mixed fabrics and defining details. <a href='princecharming.html' title='buyPrince'>Buy here.</a>">DETAILS</button>
-
-        
-      </div>
-    </div>
 
     <main>
-        <div class="flexContainer">
-            <div class="flexMe">ON SALE</div>
-            <div id="flexMe1" class="flexMe">
-                <img src="./jeans/jeans1.webp" alt="Couldn't load image">
-                <p><a href="#">Classic slim jeans</a></p>
-                <p>£79.00</p>
-                <button id="addToCart1" type="button" class="btn btn-primary customButton">Add to cart</button>
-            </div>
-            <div id="flexMe2" class="flexMe">
-                <img src="./jeans/jeans2.jpg" alt="Couldn't load image">
-                <p><a href="#">Skinny jeans</a></p>
-                <p>£79.00</p>
-                <button id="addToCart2" type="button" class="btn btn-primary customButton">Add to cart</button>
-            </div>
-            <div id="flexMe3" class="flexMe">
-                <img src="./jeans/jeans3.webp" alt="Couldn't load image">
-                <p><a href="#">Ripped straight jeans</a></p>
-                <p>£79.00</p>
-                <button id="addToCart3" type="button" class="btn btn-primary customButton">Add to cart</button>
-            </div>
-            <div id="flexMe4" class="flexMe">
-              <img src="./jeans/jeans4.jpg" alt="Couldn't load image">
-              <p><a href="#">Old-school straight jeans</a></p>
-              <p>£99.00</p>
-              <button id="addToCart4" type="button" class="btn btn-primary customButton">Add to cart</button>
-          </div>
-          <div id="flexMe5" class="flexMe">
-            <img src="./jeans/jeans5.jfif" alt="Couldn't load image">
-            <p><a href="#">Shaping skinny jeans</a></p>
-            <p>£109.00</p>
-            <button id="addToCart5" type="button" class="btn btn-primary customButton">Add to cart</button>
-        </div>
+        <div class="underConstruction">
+            <p>Nothing here yet</p>
         </div>
     </main>
 
